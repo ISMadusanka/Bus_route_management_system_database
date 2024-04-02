@@ -1,6 +1,6 @@
 -- insert data 
 
-USE BusHub6;
+USE BusHub;
 
 -- Inserting data into EMPLOYEE
 INSERT INTO EMPLOYEE (EmployeeID, Salary, Position, AddressNo, AddressStreet, AddressCity, FirstName, LastName, Birthday, ContactNo)
@@ -29,18 +29,18 @@ VALUES
 ('EMP016', 'Human Resources', 5);
 
 -- Inserting records into the DRIVER table
-INSERT INTO DRIVER (LicenceNo, EmployeeID, Experience)
+INSERT INTO DRIVER (LicenceNo, EmployeeID, Experience,LeaderID)
 VALUES 
-('DL-001', 'EMP003', 3),
-('DL-002', 'EMP004', 5),
-('DL-003', 'EMP005', 2),
-('DL-004', 'EMP006', 4),
-('DL-005', 'EMP007', 6),
-('DL-006', 'EMP008', 7),
-('DL-007', 'EMP009', 7),
-('DL-008', 'EMP010', 7),
-('DL-009', 'EMP014', 7),
-('DL-010', 'EMP015', 8);
+('DL-001', 'EMP003', 3,'DL-001'),
+('DL-002', 'EMP004', 5,'DL-001'),
+('DL-003', 'EMP005', 2,'DL-001'),
+('DL-004', 'EMP006', 4,'DL-004'),
+('DL-005', 'EMP007', 6,'DL-004'),
+('DL-006', 'EMP008', 7,'DL-004'),
+('DL-007', 'EMP009', 7,'DL-004'),
+('DL-008', 'EMP010', 7,'DL-001'),
+('DL-009', 'EMP014', 7,'DL-001'),
+('DL-010', 'EMP015', 8,'DL-001');
 
 
 
