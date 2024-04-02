@@ -2,6 +2,7 @@ CREATE DATABASE BusHub;
 
 USE BusHub;
 
+
 -- creating tables
 
 CREATE TABLE EMPLOYEE(
@@ -13,8 +14,18 @@ CREATE TABLE EMPLOYEE(
     AddressCity VARCHAR(100),
     FirstName VARCHAR(100) NOT NULL,
     LastName VARCHAR(100),
-    Birthday DATE NOT NULL,
-    ContactNo VARCHAR(15) NOT NULL UNIQUE    
+    Birthday DATE NOT NULL
+    
+    
+);
+
+CREATE TABLE EMPLOYEE_CONTACT(
+    EmployeeID VARCHAR(10),
+    ContactNo VARCHAR(15),
+
+    PRIMARY KEY(EmployeeID,ContactNo),
+
+    FOREIGN KEY(EmployeeID) REFERENCES EMPLOYEE(EmployeeID)
 );
 
 CREATE TABLE MANAGER(

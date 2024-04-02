@@ -3,24 +3,55 @@
 USE BusHub;
 
 -- Inserting data into EMPLOYEE
-INSERT INTO EMPLOYEE (EmployeeID, Salary, Position, AddressNo, AddressStreet, AddressCity, FirstName, LastName, Birthday, ContactNo)
+INSERT INTO EMPLOYEE (EmployeeID, Salary, Position, AddressNo, AddressStreet, AddressCity, FirstName, LastName, Birthday)
 VALUES 
-('EMP001', 60000.00, 'Manager', '123', 'Galle Road', 'Colombo', 'Saman', 'Perera', '1980-05-15', '0711234567'),
-('EMP002', 62000.00, 'Manager', '456', 'Mahaweli Mawatha', 'Kandy', 'Malini', 'Silva', '1978-09-20', '0722345678'),
-('EMP003', 48000.00, 'Driver', '789', 'Dutch Hospital Street', 'Galle', 'Nimal', 'Fernando', '1985-03-10', '0743456789'),
-('EMP004', 48000.00, 'Driver', '1011', 'Nupe Junction', 'Matara', 'Kumari', 'Ratnayake', '1987-07-08', '0774567890'),
-('EMP005', 48000.00, 'Driver', '1213', 'Hospital Road', 'Jaffna', 'Lalith', 'Bandara', '1989-12-25', '0765678901'),
-('EMP006', 48000.00, 'Driver', '1415', 'Temple Street', 'Trincomalee', 'Kusum', 'Fernando', '1986-08-30', '0786789012'),
-('EMP007', 48000.00, 'Driver', '1617', 'Main Street', 'Negombo', 'Sujatha', 'Silva', '1984-04-05', '0717890123'),
-('EMP008', 48000.00, 'Driver', '1819', 'Police Station Road', 'Anuradhapura', 'Sunil', 'Perera', '1990-06-12', '0728901234'),
-('EMP009', 48000.00, 'Driver', '2021', 'Bazar Street', 'Polonnaruwa', 'Nilmini', 'Fernando', '1992-02-18', '0749012345'),
-('EMP010', 48000.00, 'Driver', '2223', 'Railway Avenue', 'Batticaloa', 'Ranjan', 'Silva', '1983-10-07', '0770123456'),
-('EMP011', 55000.00, 'Supervisor', '2425', 'Church Road', 'Kalutara', 'Chandrika', 'Perera', '1982-06-25', '0761234567'),
-('EMP012', 57000.00, 'Supervisor', '2627', 'Station Road', 'Ratnapura', 'Sarath', 'Fernando', '1981-11-12', '0782345678'),
-('EMP013', 56000.00, 'Supervisor', '2829', 'Market Street', 'Kegalle', 'Malini', 'Silva', '1980-08-20', '0713456789'),
-('EMP014', 49000.00, 'Driver', '3031', 'Court Road', 'Hambantota', 'Nalaka', 'Ranasinghe', '1984-04-15', '0724567890'),
-('EMP015', 49000.00, 'Driver', '3233', 'Lake Road', 'Badulla', 'Saman', 'Jayawardena', '1986-09-30', '0745678901') ,
-('EMP016', 63000.00, 'Manager', '363', 'Victoria Gardens', 'Colombo', 'Nishantha', 'Fernando', '1975-08-10', '0777890123');
+('EMP001', 60000.00, 'Manager', '123', 'Galle Road', 'Colombo', 'Saman', 'Perera', '1980-05-15'),
+('EMP002', 62000.00, 'Manager', '456', 'Mahaweli Mawatha', 'Kandy', 'Malini', 'Silva', '1978-09-20'),
+('EMP003', 48000.00, 'Driver', '789', 'Dutch Hospital Street', 'Galle', 'Nimal', 'Fernando', '1985-03-10'),
+('EMP004', 48000.00, 'Driver', '1011', 'Nupe Junction', 'Matara', 'Kumari', 'Ratnayake', '1987-07-08'),
+('EMP005', 48000.00, 'Driver', '1213', 'Hospital Road', 'Jaffna', 'Lalith', 'Bandara', '1989-12-25'),
+('EMP006', 48000.00, 'Driver', '1415', 'Temple Street', 'Trincomalee', 'Kusum', 'Fernando', '1986-08-30'),
+('EMP007', 48000.00, 'Driver', '1617', 'Main Street', 'Negombo', 'Sujatha', 'Silva', '1984-04-05'),
+('EMP008', 48000.00, 'Driver', '1819', 'Police Station Road', 'Anuradhapura', 'Sunil', 'Perera', '1990-06-12'),
+('EMP009', 48000.00, 'Driver', '2021', 'Bazar Street', 'Polonnaruwa', 'Nilmini', 'Fernando', '1992-02-18'),
+('EMP010', 48000.00, 'Driver', '2223', 'Railway Avenue', 'Batticaloa', 'Ranjan', 'Silva', '1983-10-07'),
+('EMP011', 55000.00, 'Supervisor', '2425', 'Church Road', 'Kalutara', 'Chandrika', 'Perera', '1982-06-25'),
+('EMP012', 57000.00, 'Supervisor', '2627', 'Station Road', 'Ratnapura', 'Sarath', 'Fernando', '1981-11-12'),
+('EMP013', 56000.00, 'Supervisor', '2829', 'Market Street', 'Kegalle', 'Malini', 'Silva', '1980-08-20'),
+('EMP014', 49000.00, 'Driver', '3031', 'Court Road', 'Hambantota', 'Nalaka', 'Ranasinghe', '1984-04-15'),
+('EMP015', 49000.00, 'Driver', '3233', 'Lake Road', 'Badulla', 'Saman', 'Jayawardena', '1986-09-30') ,
+('EMP016', 63000.00, 'Manager', '363', 'Victoria Gardens', 'Colombo', 'Nishantha', 'Fernando', '1975-08-10');
+
+
+INSERT INTO EMPLOYEE_CONTACT(EmployeeID, ContactNo)
+VALUES
+('EMP001','0711234567'),
+('EMP001','0722345678'),
+('EMP002','0743456789'),
+('EMP002','0774567890'),
+('EMP003','0765678901'),
+('EMP003','0786789012'),
+('EMP003','0717890123'),
+('EMP004','0728901234'),
+('EMP004','0749012345'),
+('EMP005','0770123456'),
+('EMP006','0761234567'),
+('EMP007','0782345678'),
+('EMP008','0713456789'),
+('EMP009','0724567890'),
+('EMP010','0745678101'),
+('EMP011','0745628901'),
+('EMP011','0745598901'),
+('EMP011','0745678901'),
+('EMP012','0745679741'),
+('EMP013','0745675971'),
+('EMP014','0745673141'),
+('EMP015','0745670001'),
+('EMP015','0745675661'),
+('EMP015','0745677411'),
+('EMP016','0745678121'),
+('EMP016','0777899443');
+
 
 INSERT INTO MANAGER (EmployeeID, Area, Experience)
 VALUES 
