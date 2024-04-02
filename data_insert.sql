@@ -29,19 +29,33 @@ VALUES
 ('EMP016', 'Human Resources', 5);
 
 -- Inserting records into the DRIVER table
-INSERT INTO DRIVER (LicenceNo, EmployeeID, Experience,LeaderID)
+INSERT INTO DRIVER (LicenceNo, EmployeeID, LicenceType,LeaderID)
 VALUES 
-('DL-001', 'EMP003', 3,'DL-001'),
-('DL-002', 'EMP004', 5,'DL-001'),
-('DL-003', 'EMP005', 2,'DL-001'),
-('DL-004', 'EMP006', 4,'DL-004'),
-('DL-005', 'EMP007', 6,'DL-004'),
-('DL-006', 'EMP008', 7,'DL-004'),
-('DL-007', 'EMP009', 7,'DL-004'),
-('DL-008', 'EMP010', 7,'DL-001'),
-('DL-009', 'EMP014', 7,'DL-001'),
-('DL-010', 'EMP015', 8,'DL-001');
+('DL-001', 'EMP003', 'Expert',NULL),
+('DL-002', 'EMP004', 'Beginer','DL-001'),
+('DL-003', 'EMP005', 'Beginer','DL-001'),
+('DL-004', 'EMP006','Expert',NULL),
+('DL-005', 'EMP007', 'Intermediate','DL-004'),
+('DL-006', 'EMP008', 'Intermediate','DL-004'),
+('DL-007', 'EMP009', 'Intermediate','DL-004'),
+('DL-008', 'EMP010', 'Intermediate','DL-001'),
+('DL-009', 'EMP014', 'Intermediate','DL-001'),
+('DL-010', 'EMP015', 'Beginer','DL-001');
 
+
+-- Inserting records into the DRIVER_EXPERENCE table
+INSERT INTO DRIVER_EXPERIENCE(EmployeeID,Experience)
+VALUES
+('EMP003',10),
+('EMP004',1),
+('EMP005',1),
+('EMP006',6),
+('EMP007',2),
+('EMP008',3),
+('EMP009',1),
+('EMP010',4),
+('EMP014',5),
+('EMP015',1);
 
 
 -- Inserting records into the SUPERVISOR table
