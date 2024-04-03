@@ -1,6 +1,6 @@
 -- insert data 
 
-USE BusHub;
+USE Private_Bus_Company;
 
 -- Inserting data into EMPLOYEE
 INSERT INTO EMPLOYEE (EmployeeID, Salary, Position, AddressNo, AddressStreet, AddressCity, FirstName, LastName, Birthday)
@@ -20,7 +20,13 @@ VALUES
 ('EMP013', 56000.00, 'Supervisor', '2829', 'Market Street', 'Kegalle', 'Malini', 'Silva', '1980-08-20'),
 ('EMP014', 49000.00, 'Driver', '3031', 'Court Road', 'Hambantota', 'Nalaka', 'Ranasinghe', '1984-04-15'),
 ('EMP015', 49000.00, 'Driver', '3233', 'Lake Road', 'Badulla', 'Saman', 'Jayawardena', '1986-09-30') ,
-('EMP016', 63000.00, 'Manager', '363', 'Victoria Gardens', 'Colombo', 'Nishantha', 'Fernando', '1975-08-10');
+('EMP016', 63000.00, 'Manager', '363', 'Victoria Gardens', 'Colombo', 'Nishantha', 'Fernando', '1975-08-10'),
+('EMP017', 60000.00, 'Manager', '3435', 'Beach Road', 'Galle', 'Chaminda', 'Perera', '1979-02-28'),
+('EMP018', 62000.00, 'Manager', '3637', 'River View', 'Kandy', 'Anuradha', 'Silva', '1977-11-05'),
+('EMP019', 64000.00, 'Manager', '3839', 'Mountain View', 'Nuwara Eliya', 'Rukmal', 'Fernando', '1974-07-22'),
+('EMP020', 55000.00, 'Supervisor', '4041', 'Harbour Road', 'Colombo', 'Kasun', 'Jayasuriya', '1982-03-15'),
+('EMP021', 57000.00, 'Supervisor', '4243', 'Forest Avenue', 'Kandy', 'Indika', 'Rathnayake', '1981-01-18'),
+('EMP022', 59000.00, 'Supervisor', '4445', 'Lake Side', 'Anuradhapura', 'Dilhani', 'Silva', '1978-09-05');
 
 
 INSERT INTO EMPLOYEE_CONTACT(EmployeeID, ContactNo)
@@ -49,15 +55,32 @@ VALUES
 ('EMP015','0745670001'),
 ('EMP015','0745675661'),
 ('EMP015','0745677411'),
-('EMP016','0745678121'),
-('EMP016','0777899443');
+('EMP016','0745658121'),
+('EMP017','0775678121'),
+('EMP018','0755678121'),
+('EMP019','0745672121'),
+('EMP020','0745658121'),
+('EMP021','0745679121'),
+('EMP022','0777899433');
+
+
+
 
 
 INSERT INTO MANAGER (EmployeeID, Area, Experience)
 VALUES 
 ('EMP001', 'Operations', 5),
 ('EMP002', 'Finance', 6),
-('EMP016', 'Human Resources', 5);
+('EMP016', 'Human Resources', 5),
+('EMP017', 'Transport', 5),
+('EMP018', 'Director', 8),
+('EMP019', 'General', 4);
+
+
+
+
+
+
 
 -- Inserting records into the DRIVER table
 INSERT INTO DRIVER (LicenceNo, EmployeeID, LicenceType,LeaderID)
@@ -89,12 +112,24 @@ VALUES
 ('EMP015',1);
 
 
+
+
+
+
 -- Inserting records into the SUPERVISOR table
 INSERT INTO SUPERVISOR (SupervisorID, EmployeeID)
 VALUES 
 ('SV-001', 'EMP011'),
 ('SV-002', 'EMP012'),
-('SV-003', 'EMP013');
+('SV-003', 'EMP013'),
+('SV-004', 'EMP020'),
+('SV-005', 'EMP021'),
+('SV-006', 'EMP022');
+
+
+
+
+
 
 -- Inserting records into the ROUTE table
 INSERT INTO ROUTE (RouteNo, SupervisorID, Distance, Duration, Start, End)
