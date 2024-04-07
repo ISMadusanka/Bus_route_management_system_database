@@ -2,8 +2,18 @@ USE Private_Bus_Company;
 
 -- simple queries
 
+
+
+
 -- Selecting all columns from the EMPLOYEE table
 SELECT * FROM EMPLOYEE;
+
+
+
+
+
+
+
 
 
 -- Selecting specific columns (EmployeeID, FirstName, LastName) from the EMPLOYEE table
@@ -17,11 +27,19 @@ SELECT * FROM EMPLOYEE, DRIVER;
 
 
 
+
+
 -- Creating a view named Manager_View to select details of managers
 CREATE VIEW Manager_View AS
 SELECT EmployeeID, Position, Salary
 FROM EMPLOYEE
 WHERE Position = 'Manager';
+
+
+
+
+
+
 
 
 
@@ -133,8 +151,11 @@ RIGHT OUTER JOIN DRIVER d ON e.EmployeeID = d.EmployeeID;
 -- Retrieving all records when there is a match in either table
 SELECT e.EmployeeID, e.FirstName, d.LicenceNo
 FROM EMPLOYEE e
-FULL OUTER JOIN DRIVER d ON e.EmployeeID = d.EmployeeID;
-
+LEFT JOIN DRIVER d ON e.EmployeeID = d.EmployeeID
+UNION
+SELECT e.EmployeeID, e.FirstName, d.LicenceNo
+FROM EMPLOYEE e
+RIGHT JOIN DRIVER d ON e.EmployeeID = d.EmployeeID;
 
 
 
@@ -178,3 +199,6 @@ WHERE EmployeeID IN (SELECT EmployeeID FROM MANAGER);
 SELECT *
 FROM ROUTE
 WHERE SupervisorID IN (SELECT SupervisorID FROM SUPERVISOR WHERE EmployeeID = 'EMP011');
+
+
+
